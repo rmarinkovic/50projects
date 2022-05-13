@@ -8,10 +8,11 @@ counters.forEach((counter) => {
     const c = +counter.innerText;
 
     const increment = target / 100;
+    console.log(increment)
 
     if (c < target) {
       counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, 1);
+      updateCounter()
     } else {
       counter.innerText = target;
     }
